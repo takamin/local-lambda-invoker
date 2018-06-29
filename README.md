@@ -12,7 +12,7 @@ sample:
 const LambdaTester = require("local-lambda-invoker");
 const MyLambda = require("my-lambda/index.js");
 const lambda = new LambdaTester(MyLambda);
-(await function() {
+(async function() {
     let event = { .... };
     let response = await lambda.invoke(event);
     console.log(JSON.stringify(response));
