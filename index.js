@@ -18,7 +18,7 @@ function LambdaTester(lambda, context) {
     assert( "handler" in lambda, "lambda should contain a handler" );
     this._lambda = lambda.handler;
     this._context = {
-        getRemainingTimeInMillis = function() { return 1000; },
+        getRemainingTimeInMillis: () => 1000,
         callbackWaitsForEmptyEventLoop: 0,
         functionName: "",
         functionVersion: "",
